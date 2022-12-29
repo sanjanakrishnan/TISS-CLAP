@@ -1,0 +1,119 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>M-Ward CLAP</title>
+
+<link rel="icon" type="image/png" href="images/TISS.png"/>
+
+<style>
+
+body {
+  background-color: #F5F5F5;
+  margin: 0 15%;
+  font-family:  Open Sans, Tahoma, sans-serif;
+  }
+
+h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #57b1dc;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #228C22;
+  font-size: 1.5em;
+}
+h3 {
+  color: black;
+  font-size: 1em;
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<h1>Schemes database, matching and letter to households</h1>
+<ul>
+<li>Date: 15 May 2021</li>
+<li>Created by: sanjana</li>
+<li>Contact points: ganesh (schemes database), sanjana (scheme matching), shubham (letter and distribution)</li>
+<li>Use: Contains details of 131 updated schemes in MH and their elegibility criterion.</li>
+</ul>
+
+
+<h2>Documents and codes</h2>
+<table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Description</th>
+				<th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Scheme database</td>
+                <td>Database of 230 shemes 131 updated schemes (in sheet "filtered"), 13 departments. The dataset contains the scheme ID, scheme name, department ID, department name, and columns with documents as the column name. For documents, the number "1" in the cells indicate that it is a mandatory document to be eligible for a scheme. Documents with numbers "2" indicate that having any one of the documents is sufficient. Documents ith the numbers "3" and "4" follow the same rule as "2".<br>The ID for each scheme and department can be found in sheet 2 of the excel sheet.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/schemes.document.code.xlsx' target="_blank">View schemes database (excel)</a>
+				</td>
+            </tr>
+            <tr>
+                <td>Format of letter to household</td>
+                <td>Contains the text of the signed letter from CLAP to be sent to the household, that contains the schemes they are eligible for and relevant contact numbers.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/Letter_SurveyCertificate.doc' target="_blank">template of letter to household</a>
+				</td>
+            </tr>
+            <tr>
+                <td>Code to match schemes to individuals and prepare information needed for letter for each household</td>
+                <td>This code looks at the documents each individual has (from the survey: individual dataset) and checks if they have all the documents required to be eligible for a scheme. It checks it for each of the 131 schemes and generates a dataset with all the individual schemes each person can apply for.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/code/CLAP_schemes.R' target="_blank">Download clap_report.RmD</a></td>
+            </tr>
+            <tr>
+                <td>Database for generating letters to households</td>
+                <td>This excel data will be used to create individual letters in word using mail merge.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/letter_to_HH_2.xlsx' target="_blank">Download excel, english</a>
+					<a href='http://46.101.238.172/TISS-CLAP/data/letter_hh_hindi_v3.xlsx' target="_blank">Download with hindi transliteration</a>
+				</td>
+            </tr>
+            <tr>
+                <td>Individual-schemes matched</td>
+                <td>The csv file contains the individuals pid and their eligibility for 131 identified schemes. The column names are scheme codes and 0/1 in the cells imply (no/yes) indicating if they are eligible for the scheme or not.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/schemes_for_individuals_2.xlsx' target="_blank">Download excel</a></td>
+            </tr>
+        </tbody>
+    </table>	
+<br>
+
+<p>Acknowledgement: Pratik Agarwal for transliterating text to hindi</p>
+<br>
+</body>
+
+</html>

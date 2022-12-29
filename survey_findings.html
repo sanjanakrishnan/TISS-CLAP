@@ -1,0 +1,126 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>M-Ward CLAP</title>
+
+<link rel="icon" type="image/png" href="images/TISS.png"/>
+
+<style>
+
+body {
+  background-color: #F5F5F5;
+  margin: 0 15%;
+  font-family:  Open Sans, Tahoma, sans-serif;
+  }
+
+h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #57b1dc;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #228C22;
+  font-size: 1.5em;
+}
+h3 {
+  color: black;
+  font-size: 1em;
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<h1>SURVEY FINDINGS AND BASTI WISE DATA AND REPORTS</h1>
+<ul>
+<li>Date: 15 May 2021</li>
+<li>Created by: sanjana</li>
+<li>Use: Contains the methods, data and code used to create reports on all indicators collected in the survey for M-Ward and for the 26 bastis</li>
+</ul>
+
+
+<h2>Documents and codes</h2>
+<table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Description</th>
+				<th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Reports</td>
+                <td>The survey findings basti wise for 26 bastis and for M-Ward, on the five aspects of emography, housing, water and toilets, health infrastructure and status, mental health and documents can be found here</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/index.html' target="_blank">View basti-wise report</a>
+				</td>
+            </tr>
+            <tr>
+                <td>Code to generate reports</td>
+                <td>Written in R Markdown, the code generates the findings in the format of the reports mentioned in the above link. It can be used for any dataset in the format of the survey</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/code/clap_report.Rmd' target="_blank">Download clap_report.RmD</a></td>
+            </tr>
+            <tr>
+                <td>Code to prepare datasets and run the markdown file</td>
+                <td>Code to generate basti wise data sebsets and source the RMD reports for all bastis in a loop</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/code/clap_report_support.R' target="_blank">Download clap_report_suport.R</a></td>
+            </tr>
+            <tr>
+                <td>Analysis of income</td>
+                <td>Contains findings from survey on age, gender and education wise income of adults ccaputured in the survey</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/income_analysis.html' target="_blank">View income report</a></td>
+            </tr>
+            <tr>
+                <td>Code to generate income report</td>
+                <td>The R Markdown file contains the code to generate summary findings on the income status of the respondants.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/code/income.Rmd' target="_blank">Download income.Rmd</a></td>
+            </tr>
+        </tbody>
+    </table>	
+<br>
+
+<h2>Method</h2>
+<p>Once the survey dataset was merged, coded and cleaned, the data was analysed on aspects of: demography, housing, water and toilets, health infrastructure and status, mental health and documents. The base data can be found in the section on survey data aggregation and coding.
+Steps 
+<ol>
+<li>In lines 4-28 in clap_report_support.R, the code is used to produce basti wise individual and househld reports and save them in two directories (HH_data and Ind_data)</li>
+<li>Following this, code (clap_report.Rmd) was written in RMarkdown to produce html reports containing the main survey findings. To run the markdown code, run lines 29-53 in clap_report_support.R. The generated reports are stored in a directory called reports </li>
+<li>In all the analysis, please note the 'n' value (number of respondants) has been mentioned. </li>
+<li>This was done for all 26 bastis and M-Ward. The outputs can be found in this <a href='http://46.101.238.172/TISS-CLAP/index.html' target="_blank">link</a>.</li>
+<li>Additionally, a seperate code (income.Rmd) was written to provide a summary of the occupation and income trends in M-Ward
+</ol>
+<br>
+</p>
+
+</body>
+
+</html>

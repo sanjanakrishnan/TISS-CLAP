@@ -1,0 +1,188 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>M-Ward CLAP</title>
+
+<link rel="icon" type="image/png" href="images/TISS.png"/>
+
+<style>
+
+body {
+  background-color: #F5F5F5;
+  margin: 0 15%;
+  font-family:  Open Sans, Tahoma, sans-serif;
+  }
+
+h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #57b1dc;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #228C22;
+  font-size: 1.5em;
+}
+h3 {
+  color: black;
+  font-size: 1em;
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<h1>SURVEY DATA AGGREGATION, CODING and CLEANING</h1>
+<ul>
+<li>Date: 12 May 2021</li>
+<li>Created by: sanjana</li>
+<li>Use: Contains the cleaned survey data for individuals and HHs and the codebook. Additionally, it contains the cleaning, code for cleaning data and the lookup tables. Also contains an app created for searching</li>
+</ul>
+
+<h2>Important outputs</h2>
+<p>The outputs of the survey can be found in three key datasets and one search application.</p>
+<table>
+        <thead>
+            <tr>
+                <th>Dataset</th>
+                <th>Description</th>
+				<th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Codebook</td>
+                <td>See sheet "codes". Divides questions into two groups (HH and ind) and 10 sub groups. It assigns a "question code" to the 194 questions in the column "code".</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/codebook.xlsx' target="_blank">Download</a> size: 440kb. 1717 rows, 7 columns</td>
+            </tr>
+            <tr>
+                <td>Individual dataset</td>
+                <td>Contains clened versions of individual level data and associated household data. Columns with "_c" rat the end efer to the cleaned versions of the column, which should be used for analysis. Each row has a unique person ID (PID) attached to it.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/Ind_cleaned.xlsx' target="_blank">Download excel</a> size 146.3 MB 
+					<br><a href='http://46.101.238.172/TISS-CLAP/data/Ind_cleaned.csv' target="_blank">Download csv</a> size: 647 MB. 97414 rows, 363 columns</td>
+            </tr>
+            <tr>
+                <td>Household dataset</td>
+                <td>Contains cleaned version of household level data. Columns with "_c" rat the end efer to the cleaned versions of the column, which should be used for analysis. Each row has a unique person ID (hhid) attached to it.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/HH_cleaned.csv' target="_blank">Download csv</a> size 61.6 MB
+					<br><a href='http://46.101.238.172/TISS-CLAP/data/HH_cleaned.xlsx' target="_blank">Download excel</a> size: 23.6 MB. 25579 rows, 268 columns
+				</td>
+            </tr>
+            <tr>
+                <td>occupation dataset</td>
+                <td>contains cleaned data related to the occupation, livelihood and income of individuals before and after the March 2020 lockdown. Occupations were further classified to occupation group (construction worker, begari, housework etc.), government/private/self-employed, essential services, and formal/informal.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/occupations.xlsx' target="_blank">Download csv</a> size: 11.5MB. 97414 rows, 15 columns</td>
+            </tr>
+            <tr>
+                <td>search application</td>
+                <td>application to search for households and individuals covered in the survey based on their names and phone numbers. This was used by CRFs and CFs to aid the geolocation of households on maps. It was also used by CLAP volunteers as they collected relief requests from the community during the second lockdown. </td>
+				<td><a href='https://sanjana-krishnan.shinyapps.io/test/' target="_blank">open app</a></td>
+            </tr>
+        </tbody>
+    </table>
+<br><p>The three datasets; household, individual and basti; each have a unique identifier/ID and are linked by identifyers (primary and secondary keys). Each individual is assigned a unique "person ID". Each household is assigned a unique "hhid" and each basti has a unique name. The entity relationship diagram shows the many-to-one relationship between indivduals, households and bastis; i.e. every individual is linked to one HH, and every HH is linked to one basti. Each basti has several households and each households has several individuals.<br></p>
+<img src="images/ER_diagram.png" width=70% height=auto alt="ER diagram" class="center">
+
+
+<br>
+
+<h2>Background and process</h2>
+<h3>Survey design and form</h3>
+<p>The survey had 194 questions and had two units of data collection: Households and individuals. Questions are on 10 sub groups (housig, health, water, sanitation etc.) 147 questions were asked to each HH and 47 questions to each individual. There survey was filled in using kobo toolbox. There were two versions of the survey form. The link to the forms and the output data:
+<table>
+        <thead>
+            <tr>
+                <th>Survey version</th>
+                <th>Link to kobo form</th>
+				<th>Data collected</th>
+            </tr>
+        </thead>
+        <tbody>
+                <td>Version 1</td>
+                <td> <i>shubham to add</i> </td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/survey_ver1.xlsx' target="_blank">Download excel</a> size 12.1 MB; 6580 rows, 1586 columns</td>
+            </tr>
+            <tr>
+                <td>Version 2</td>
+                <td><i>shubham to add</i></td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/survey_ver2_20Jan2021.xlsx' target="_blank">Download excel</a> size 34.9 MB; 18999 rows, 1684 columns</td>
+            </tr>
+        </tbody>
+    </table>
+</p>
+<br>
+
+<h3>Training volunteers for data collection</h3>
+<p> <i>shubham to add</i>
+</p>
+<br>
+
+<h3>Coding the survey and version control</h3>
+<p>
+<ul>
+<li><a href='http://46.101.238.172/TISS-CLAP/data/codebook.xlsx' target="_blank">Codebook</a> was used to standardize the two versions of the survey and create a common dataset with common column headings. See sheet "ver1", "ver2" and the standardised sheet "codes" in the excel sheet.
+<li>Version control and coding column names was done through the R code <a href='http://46.101.238.172/TISS-CLAP/code/clap_cleaning.R' target="_blank">clap_cleaning.R</a> as per the codebook
+<li>Assigning unique ids to households (HHID) and individuals (PID): The code to assign ids can be found from line 94-97 and 185 in the R code. Additionally, a "new_hhid" was created for bastiwise ids this was used to mark households on the maps. However, do not consider this for analysis as several households were moved from one basti to another due to errors in data collection. The "new_hhid: is to be used only in reference to the mapping of HHs done by volunteers on maps.
+</ul>
+</p>
+
+<br>
+<h3>Survey data cleaning</h3>
+<p>The data collected in the survey required extensive cleaning. Almost every column had to be manually cleaned. This was done by volunteers in the first level, after which secondary and tertiary cleaning was done.
+<ul>
+	<li><a href='http://46.101.238.172/TISS-CLAP/data/compiled.xlsx' target="_blank">Columns on health, toilet, water, housing and background information</a>
+	<li>Gender
+	<li>Change in basti names
+	<li><a href='http://46.101.238.172/TISS-CLAP/data/volunteer_name.xlsx' target="_blank">Volunteer names</a>
+	<li><a href='http://46.101.238.172/TISS-CLAP/data/job_complete.xlsx' target="_blank">Income</a>
+</ul>
+<br>
+For final cleaned datasets, refer to the section above on "Important outputs". 
+</p>
+
+<br>
+<h3>Search application</h3>
+<p>A simple search application was created to search for households and individuals covered in the survey based on their names and phone numbers. This was used by CRFs and CFs to aid the geolocation of households on maps. It was also used by CLAP volunteers as they collected relief requests from the community during the second lockdown.
+<br><br>
+<img src="images/search_app.png" width=50% height=auto alt="ER diagram" class="center">
+<br><br>
+<ul>
+	<li>server side code: <a href='http://46.101.238.172/TISS-CLAP/applications/search_app/server.R' target="_blank">download server.R</a>
+	<li>UI side code: <a href='http://46.101.238.172/TISS-CLAP/applications/search_app/ui.R' target="_blank">download ui.R</a>
+	<li>data used: <a href='http://46.101.238.172/TISS-CLAP/applications/search_app/ind_filter.csv' target="_blank">individual data</a>, 
+		<a href='http://46.101.238.172/TISS-CLAP/data/HH_cleaned.csv' target="_blank">household data</a>
+</ul>
+The application was created on R shiny and hosted on shinyapps.io. For details on the token and deployment of the appplication, contact sanjana.
+</p>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>M-Ward CLAP</title>
+
+<link rel="icon" type="image/png" href="images/TISS.png"/>
+
+<style>
+
+body {
+  background-color: #F5F5F5;
+  margin: 0 15%;
+  font-family:  Open Sans, Tahoma, sans-serif;
+  }
+
+h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #57b1dc;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #228C22;
+  font-size: 1.5em;
+}
+h3 {
+  color: black;
+  font-size: 1em;
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<h1>CLAP RELIEF WORK</h1>
+<ul>
+<li>Date: 15 May 2021</li>
+<li>Created by: sanjana</li>
+<li>Contact points: shubham (association with FFF, planning and allocating ration), srishti (for iCall related data), sanjana (data management and application)
+<li>Use: CLAP undertook relief work in the second lockdown in Maharashtra from April 14 2021. Requests were collcted and kits were distributed by CLAP CFs and CRFs and iCall counsellors. Ration kits and food packets were prioritized based on urgency and 'vulnerability scores'. This webpage has the details regarding the relief distribution verticle archieved as of 15th May 2021.</li>
+</ul>
+
+<h2>Datasets</h2>
+<p>Relief distribution was started during the second state-wide lockdown in Maharashtra in April 2021. A google form was created, it was used by CLAP volunteers to fill details of the volunteers. Further, iCall through its helpline was maintaining a sheet to record ration requests. <br>
+Volunteers and dedicated volunteers used the “Search” app to input the HHID of those requesting ration when available. 
+<br><br>
+Feeding from Far (FFF) was the main food delivery partner for CLAP.
+As kits were limited, the vulnerability scores were used to prioritize vaccines. The HHID and index was added (hh_index- average of individuals and households). These were used to prioritize the vaccines (70-30 formula). A separate line was maintained for iCall requests.<br>
+The data was presented in a dashboard for transparancy and easy access to information.
+<br>
+</p>
+<table>
+        <thead>
+            <tr>
+                <th>Dataset</th>
+                <th>Description</th>
+				<th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Google form</td>
+                <td>The form was filled in by CRFs and CFs to log the requests for ration and medical assistance from households. The form ased questions on the family, reason for needing ration relief (widowed, losing livelihood, women-led households, disability, accident etc.). Attributes about cost of medicines and prescription were added later and thus will have missing entries.
+</td>
+				<td><a href='https://forms.gle/8DCQmLMnKziJ97jQ6' target="_blank">View form</a><br><a href='https://docs.google.com/forms/d/1KPi1MFsscIOcFpACr7yktYYnS7ERdN7Lo7X499hqtpA/edit?usp=sharing' target="_blank">Edit form</a>
+				</td>
+            </tr>
+            <tr>
+                <td>Dataset (archived as of 13th May 2021)</td>
+                <td>Contains the cleaned form responses. Further, data from iCall helpline has been added to the sheet. Columns in the end added were added to track the status of distribution (yes, pending), date of distribution and the person distributing it. Household vulnerability index is added in the last column to help prioritize.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/request_form.csv' target="_blank">Download dataset</a> size 1.7 MB <br>
+				<a href='https://docs.google.com/spreadsheets/d/1cljzBxMvAdPnNo4LYCLTBeWE8quUWq_wUy-pwzB6v40/edit?usp=sharing' target="_blank">View live google sheet specific for requests through iCall</a> size 1.7 MB</td>
+            </tr>
+            <tr>
+                <td>Food packet distribution (archived as of 13th May 2021)</td>
+                <td>Contains cleaned data on daily distribution of food packets in each slum cluster.</td>
+				<td><a href='http://46.101.238.172/TISS-CLAP/data/food_packets.csv' target="_blank">Download csv</a> size: 1MB.</td>
+            </tr>
+        </tbody>
+    </table>
+	
+<br>
+<h2>Other outputs</h2>
+<h3>ration distribution rationale + communication material</h3>
+<p>As the number of ration kits were limited, they were targetted to those who need it to the most. 60-70% of the ration was decided by the households and individuals vulnerability index. 30-40% was given to those outside the survey and prioritized for those who did not have ration cards. Further, women-led households, widows and the requests through iCall were prioritized. <br>Communication material was created that could be used by CLAP volunteers to explain this rationale for ration distribution.<br>
+	Editable format of the image:<a href='https://drive.google.com/file/d/1BchRiGJB9kHwouAP9Rmvuc-2nUepGmSM/view?usp=sharing' target="_blank">Google slides</a>: slide 18-20 <br></p>
+<img src="images/relief_rationale_en.png" width=70% height=auto alt="rationale_english" class="center"><br>
+<img src="images/relief_rationale_hi.png" width=70% height=auto alt="rationale_hindi" class="center">
+
+<br>
+<h3>Relief application and dashboard</h3>
+<p>Application was created to display the data collected transparantly and provide regular updates on the status of ration distribution to those involved in relief work. The application has two functionalities:
+<ul>
+	<li>Dashboard: to display the daily requests and distribution of ration and food packets, over time and basti wise<br>
+	<img src="images/relief_dashboard.jpeg" width=70% height=auto alt="dashboard1" class="center">
+	</li>
+	<br>
+	<li>Search table: to search and see details of all individual requests that have come in, if they have been addressed and when.<br>
+	<img src="images/relief_dashboard2.png" width=70% height=auto alt="dashboard2" class="center">
+	</li>
+</ul>
+<br>
+The code to create the dashboard can be found here
+<ul>
+	<li>server side code: <a href='http://46.101.238.172/TISS-CLAP/applications/relief_app/server.R' target="_blank">download server.R</a></li>
+	<li>UI side code: <a href='http://46.101.238.172/TISS-CLAP/applications/relief_app/ui.R' target="_blank">download server.R</a></li>
+	<li>data used: download datasets given in table above, additionally download <a href='http://46.101.238.172/TISS-CLAP/applications/relief_app/hhid_hhindex.csv' target="_blank">download hh vulnerability index data</a> </li>
+</ul>
+The application was created on R shiny and hosted on shinyapps.io. For details on the token and deployment of the appplication, contact sanjana.
+</p>
+<br>
+
+</body>
+
+</html>

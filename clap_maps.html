@@ -1,0 +1,124 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>M-Ward CLAP</title>
+
+<link rel="icon" type="image/png" href="images/TISS.png"/>
+
+<style>
+
+body {
+  background-color: #F5F5F5;
+  margin: 0 15%;
+  font-family:  Open Sans, Tahoma, sans-serif;
+  }
+
+h1 {
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid #57b1dc;
+  margin-top: 30px;
+}
+
+h2 {
+  color: #228C22;
+  font-size: 1.5em;
+}
+h3 {
+  color: black;
+  font-size: 1em;
+}
+
+table {
+    width: 1000px;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+
+</head>
+
+<body>
+<h1>CLAP MAPS</h1>
+<ul>
+<li>Date: 15 May 2021</li>
+<li>Created by: sanjana</li>
+<li>Contact points: avinash, vijay, sanjana (for non-CLAP related shapefiles and kmls)</li>
+<li>Use: Contains maps created as part of the CLAP project and also a general repository of maps</li>
+</ul>
+
+<h2>Maps created and specific to M-Ward</h2>
+<p>Maps created by the CLAP project <br> <i>more details to be filled by Avinash/Vijay</i>
+<ol>
+<li><a href="https://drive.google.com/drive/folders/1ArwZ_uh22hmvaGXnaW1g3i0GQavoCbdC?usp=sharing">Scanned Maps</a>: The file contains the scanned copy of all the maps with marked HHIDs created by CRF for all communities. These can be used to find out the geographical location of surveyed households.</li>
+<li>Boundaries of 26 bastis covered in CLAP survey on Google my maps: <br>
+<iframe src="https://www.google.com/maps/d/embed?mid=1TPxAO_aUgpytHn9vBsYwNY5Vq20vZ1Mb" width="640" height="480"></iframe> <br>
+link to download map: <a href='http://46.101.238.172/TISS-CLAP/maps/CLAP_26bastis.kml' target="_blank">download kml</a>
+</li>
+<li>Individual kml files for 22 bastis: <i>(incomplete) </i><a href='http://46.101.238.172/TISS-CLAP/maps//2020_CLAPbastis.zip' target="_blank">Download zipped folder</a></li>
+<li>Slum boundaries 2011 baseline survey: <a href='http://46.101.238.172/TISS-CLAP/maps/2011_baselinesurvey_maps.7z' target="_blank">Download zipped folder</a></li>
+<li>Mumbai COVID relief infrastructure: </li>
+</ol>
+<br>
+</p>
+
+<h2>Maps of Mumbai</h2>
+<p>Repositry of editable versions of Mumbai city maps<br> 
+<ol>
+<li>M-WARD Land parcels and ownership: Contains outlines of 6583 land parcels in M Ward with details on their ownership, name of owner, area <a href='http://46.101.238.172/TISS-CLAP/maps/M_ward_landparcels.zip' target="_blank">Download shapefiles</a>, 
+	<a href='http://46.101.238.172/TISS-CLAP/maps/MWard_landparcels.csv' target="_blank">Download attribute table</a>, 
+	<a href='https://www.google.com/maps/d/viewer?mid=1LtEe9f--gSOvzm3duv2kzARR6McVKKN1&usp=sharing ' target="_blank">View Map</a>  source: 
+	<a href='https://www.arcgis.com/apps/webappviewer/index.html?id=60ed465397a74508a58bfd401014096b'target="_blank">MCGM iSarita</a>, Datameet	
+<br><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1LtEe9f--gSOvzm3duv2kzARR6McVKKN1" width="640" height="480"></iframe>
+</li>
+<li>Mumbai slum boundaries: <a href='http://46.101.238.172/TISS-CLAP/maps/Mumbai_slums_2016.geojson' target="_blank">Download geojson</a> source- datameet</li>
+<li>Mumbai administrative ward boundaries: <a href='http://46.101.238.172/TISS-CLAP/maps/BMC_Wards.geojson' target="_blank">Download</a> source-datameet</li>
+<li>Mumbai 2017 BMC electoral ward boundaries: <a href='http://46.101.238.172/TISS-CLAP/maps/BMCprabhags_2017.kml' target="_blank">Download</a> source-datameet</li>
+<li>Mumbai 2012 BMC electoral ward boundaries: <a href='http://46.101.238.172/TISS-CLAP/maps/2012_prabhags.zip' target="_blank">Download</a> source-</li>
+<li>Mumbai 2011 census ward boundaries: <a href='http://46.101.238.172/TISS-CLAP/maps/censuswardboundary_719_456.mvt' target="_blank">part 1 .mvt</a>, <a href='http://46.101.238.172/TISS-CLAP/maps/censuswardboundary_719_456.mvt' target="_blank">part 2 .mvt</a> source-datameet</li>
+</ol>
+<br>
+</p>
+
+<h3>Code in R to convert .mvt tiles to shapefile in R</h3>
+<pre><code>
+library(protolite)
+library(sp)
+library(sf)
+library(rgdal)
+library(foreign)
+
+boundary1 <- read_mvt_sf("electionwardboundary_719_457.mvt", crs= 7767, zxy= c(10,719,457))
+t1 <- (boundary1$electionwardboundary$geometry)
+#enter z=1, x and y from the name of the mvt file
+#crs=7767 for Mumbai
+
+plot(t1)
+st_write(t1, "mumbai_south.shp")
+</code></pre>
+
+<br>
+</body>
+
+</html>
