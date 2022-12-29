@@ -1,0 +1,165 @@
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>M-Ward CLAP</title>
+
+    <link rel="icon" type="image/png" href="images/TISS.png" />
+
+    <style>
+        body {
+            background-color: #F5F5F5;
+            margin: 0 15%;
+            font-family: Open Sans, Tahoma, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: serif;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-bottom: 1px solid #d1ecf8;
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #228C22;
+            font-size: 1.5em;
+        }
+
+        table {
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1><img src="images/TISS.png" width="200" height="200" alt="TISS logo"><br>M-WARD CLAP Project: Documentation</h1>
+
+
+    <ul>
+        <li><a href="#consolidated">Report for M-Ward</a></li>
+        <li><a href="#reports">Basti level reports</a></li>
+        <li><a href="#income">Analysis on income and livelihood</a></li>
+
+    </ul>
+
+    <h2 id="consolidated">M-Ward level report</h2>
+    <p>Consolidated report for ward including all households surveyed: <a
+            href="report/M-Ward-consolidated.html">Report</a></p>
+
+    <h2 id="reports">Basti-Level Reports</h2>
+    <ol>
+        <li><a href="report/Adarsh%20Nagar.html">Adarsh Nagar</a></li>
+        <li><a href="report/Ambedkar%20Nagar.html">Ambedkar Nagar</a></li>
+        <li><a href="report/Bhim%20Nagar.html">Bhim Nagar</a></li>
+        <li><a href="report/Chikuwadi%20Rahul%20Nagar.html">Chikuwadi Rahul Nagar</a></li>
+        <li><a href="report/Chikuwadi.html">Chikuwadi</a></li>
+        <li><a href="report/Cheetah%20Camp.html">Cheetah Camp</a></li>
+        <li><a href="report/Indira%20Nagar%20%28Maharashtra%29.html">Indira Nagar (Maharashtra)</a></li>
+        <li><a href="report/Indira%20Nagar%20%28Mandala%29.html">Indira Nagar (Mandala)</a></li>
+        <li><a href="report/Indira%20Nagar%20%28Shivaji%20Nagar%29.html">Indira Nagar (Shivaji Nagar)</a></li>
+        <li><a href="report/Jay%20Ambe%20Nagar.html">Jay Ambe Nagar</a></li>
+        <li><a href="report/Jyotirling%20Nagar.html">Jyotirling Nagar</a></li>
+        <li><a href="report/Lallubhai%20Compound.html">Lallubhai Compound</a></li>
+        <li><a href="report/Maharashtra%20Nagar.html">Maharashtra Nagar</a></li>
+        <li><a href="report/Mahatangrishi%20Nagar.html">Mahatangrishi Nagar</a></li>
+        <li><a href="report/Nirankari%20Nagar.html">Nirankari Nagar</a></li>
+        <li><a href="report/Panchshil%20Nagar.html">Panchshil Nagar</a></li>
+        <li><a href="report/Patilwadi.html">Patilwadi</a></li>
+        <li><a href="report/PMGP%20Colony.html">PMGP Colony</a></li>
+        <li><a href="report/Rafi%20Nagar-1.html">Rafi Nagar</a></li>
+        <li><a href="report/Sanjay%20Nagar.html">Sanjay Nagar</a></li>
+        <li><a href="report/Sathe%20Nagar.html">Sathe Nagar</a></li>
+        <li><a href="report/Single%20Line.html">Single Line</a></li>
+        <li><a href="report/Sundarbaug.html">Sundarbaug</a></li>
+        <li><a href="report/Tata%20Nagar.html">Tata Nagar</a></li>
+        <li><a href="report/Transit%20Camp.html">Transit Camp</a></li>
+        <li><a href="report/Vilas%20Gopal%20Chawl.html">Vilas Gopal Chawl</a></li>
+    </ol>
+
+    <h2 id="income">Income analysis report</h2>
+    <p>Analysis of income and livelihood: <a href="report/income.html">Report</a></p>
+
+
+    <h2>Data and methods</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>Description</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Code to generate reports</td>
+                <td>Written in R Markdown, the code generates the findings in the format of the reports mentioned in the
+                    above link. It can be used for any dataset in the format of the survey</td>
+                <td><a href='http://46.101.238.172/TISS-CLAP/code/clap_report.Rmd' target="_blank">Download
+                        clap_report.RmD</a></td>
+            </tr>
+            <tr>
+                <td>Code to prepare datasets and run the markdown file</td>
+                <td>Code to generate basti wise data sebsets and source the RMD reports for all bastis in a loop</td>
+                <td><a href='http://46.101.238.172/TISS-CLAP/code/clap_report_support.R' target="_blank">Download
+                        clap_report_suport.R</a></td>
+            </tr>
+            <tr>
+                <td>Code to generate income report</td>
+                <td>The R Markdown file contains the code to generate summary findings on the income status of the
+                    respondants.</td>
+                <td><a href='http://46.101.238.172/TISS-CLAP/code/income.Rmd' target="_blank">Download income.Rmd</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <h3>Method</h3>
+    <p>Once the survey dataset was merged, coded and cleaned, the data was analysed on aspects of: demography, housing,
+        water and toilets, health infrastructure and status, mental health and documents. The base data can be found in
+        the section on survey data aggregation and coding.
+        Steps
+        <ol>
+            <li>In lines 4-28 in clap_report_support.R, the code is used to produce basti wise individual and househld
+                reports and save them in two directories (HH_data and Ind_data)</li>
+            <li>Following this, code (clap_report.Rmd) was written in RMarkdown to produce html reports containing the
+                main survey findings. To run the markdown code, run lines 29-53 in clap_report_support.R. The generated
+                reports are stored in a directory called reports </li>
+            <li>In all the analysis, please note the 'n' value (number of respondants) has been mentioned. </li>
+            <li>This was done for all 26 bastis and M-Ward. The outputs can be found above.</li>
+            <li>Additionally, a seperate code (income.Rmd) was written to provide a summary of the occupation and income
+                trends in M-Ward
+        </ol>
+        <br>
+    </p>
+
+
+</body>
+
+</html>
